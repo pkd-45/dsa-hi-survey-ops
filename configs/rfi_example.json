@@ -1,0 +1,4 @@
+{
+  "description": "Synthetic demonstration bands only; not an OVRO RFI database.",
+  "bands_mhz": [[1330.2, 1331.0], [1370.0, 1382.0], [1401.2, 1402.0]]
+}

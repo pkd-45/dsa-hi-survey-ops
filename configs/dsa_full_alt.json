@@ -1,0 +1,23 @@
+{
+  "name": "Illustrative DSA alternate configuration (deepsynoptic.org/overview detailed product list, accessed 12 July 2026)",
+  "frequency_range_mhz": [
+    700.0,
+    2000.0
+  ],
+  "observing_block_minutes": 20.0,
+  "spectral_products": {
+    "hi_zlt1": {
+      "n_channels": 5600,
+      "channel_width_khz": 130.0
+    },
+    "hi_nearby_zoom": {
+      "n_channels": 4096,
+      "channel_width_khz": 8.0
+    },
+    "hi_galactic": {
+      "n_channels": 960,
+      "channel_width_khz": 1.0
+    }
+  },
+  "source": "https://www.deepsynoptic.org/overview"
+}

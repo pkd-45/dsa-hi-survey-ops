@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsa-hi-survey-ops"
+version = "0.2.0"
+description = "Catalogue-aware planning and science-product validation for DSA H I surveys"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Pratyush Kumar Das", email = "p.das@uq.edu.au"}]
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "matplotlib>=3.8",
+  "astropy>=6.0"
+]
+
+[project.scripts]
+dsa-hi-survey-ops = "dsa_hi_survey_ops.demo:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

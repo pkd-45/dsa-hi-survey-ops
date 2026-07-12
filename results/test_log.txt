@@ -1,0 +1,22 @@
+test_broad_mask_is_more_complete (test_cube_pipeline.CubePipelineTests.test_broad_mask_is_more_complete) ... ok
+test_compression_noop (test_cube_pipeline.CubePipelineTests.test_compression_noop) ... ok
+test_continuum_subtraction_preserves_line_flux (test_cube_pipeline.CubePipelineTests.test_continuum_subtraction_preserves_line_flux) ... ok
+test_end_to_end_demo_writes_outputs (test_cube_pipeline.CubePipelineTests.test_end_to_end_demo_writes_outputs) ... ok
+test_measurement_and_qa_are_finite (test_cube_pipeline.CubePipelineTests.test_measurement_and_qa_are_finite) ... ok
+test_rfi_channels_are_detected (test_cube_pipeline.CubePipelineTests.test_rfi_channels_are_detected) ... ok
+test_alternate_configs_run_through_optimizer (test_instrument_and_zoom.ConfigVariantsAndSeasonTests.test_alternate_configs_run_through_optimizer) ... ok
+test_seasonal_drift_is_of_annual_earth_orbit_scale (test_instrument_and_zoom.ConfigVariantsAndSeasonTests.test_seasonal_drift_is_of_annual_earth_orbit_scale) ... ok
+test_hi_frequency_round_trip (test_instrument_and_zoom.InstrumentAndZoomTests.test_hi_frequency_round_trip) ... ok
+test_optimizer_contains_high_weight_cluster (test_instrument_and_zoom.InstrumentAndZoomTests.test_optimizer_contains_high_weight_cluster) ... ok
+test_reference_configuration_arithmetic (test_instrument_and_zoom.InstrumentAndZoomTests.test_reference_configuration_arithmetic) ... ok
+test_rfi_penalty_reduces_overlap (test_instrument_and_zoom.InstrumentAndZoomTests.test_rfi_penalty_reduces_overlap) ... ok
+test_target_interval_grows_with_uncertainty (test_instrument_and_zoom.InstrumentAndZoomTests.test_target_interval_grows_with_uncertainty) ... ok
+test_bright_disk_detected (test_real_cube_adapter.RealCubeAdapterTests.test_bright_disk_detected) ... ok
+test_channel_averaging_preserves_integrated_flux (test_real_cube_adapter.RealCubeAdapterTests.test_channel_averaging_preserves_integrated_flux) ... ok
+test_fits_roundtrip_nan_handling_and_recovery (test_real_cube_adapter.RealCubeAdapterTests.test_fits_roundtrip_nan_handling_and_recovery) ... ok
+test_matched_filter_snr_calibration (test_real_cube_adapter.RealCubeAdapterTests.test_matched_filter_snr_calibration) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 4.361s
+
+OK

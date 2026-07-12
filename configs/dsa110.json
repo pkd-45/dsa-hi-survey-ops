@@ -1,0 +1,7 @@
+{
+  "name": "DSA-110 public specifications",
+  "frequency_range_mhz": [1280.0, 1530.0],
+  "n_channels": 8192,
+  "derived_channel_width_khz": 30.517578125,
+  "source": "https://www.deepsynoptic.org/instrument"
+}

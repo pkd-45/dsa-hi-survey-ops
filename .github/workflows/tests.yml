@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Run deterministic demonstration
+        run: python -m dsa_hi_survey_ops.demo --output /tmp/dsa-hi-survey-ops-results
+
+      - name: Run FITS-cube adapter release check
+        run: python scripts/real_cube_adapter.py --demo-synthetic --n-inj 12 --outdir /tmp/dsa-hi-adapter

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this software using the metadata below."
+title: "dsa-hi-survey-ops: Catalogue-aware planning and science-product validation for DSA H I surveys"
+version: 0.2.0
+date-released: 2026-07-12
+authors:
+  - family-names: "Das"
+    given-names: "Pratyush Kumar"
+    orcid: "https://orcid.org/0000-0002-4326-8598"
+repository-code: "https://github.com/pkd-45/dsa-hi-survey-ops"
+license: MIT
+keywords:
+  - radio astronomy
+  - neutral hydrogen
+  - Deep Synoptic Array
+  - survey operations
+  - source selection
+  - quality assurance
