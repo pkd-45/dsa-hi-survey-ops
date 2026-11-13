@@ -1,39 +1,20 @@
-# GitHub release steps for Windows
+# Windows release verification
 
-Run these commands from the extracted project folder only after
-`run_tests_windows.ps1` finishes successfully with 17 tests and the adapter demonstration.
-
-```powershell
-cd D:\work\job\dsa-hi-survey-ops
-
-git init
-git branch -M main
-git add .
-git status
-git commit -m "Initial public release of dsa-hi-survey-ops"
-
-gh repo create pkd-45/dsa-hi-survey-ops `
-  --public `
-  --description "Catalogue-aware spectral planning and science-product validation for DSA HI surveys." `
-  --source=. `
-  --remote=origin `
-  --push
-
-git tag -a v0.2.0 -m "Application methods release"
-git push origin v0.2.0
-
-gh release create v0.2.0 `
-  --title "dsa-hi-survey-ops v0.2.0" `
-  --notes "Catalogue-aware zoom-band optimisation, seasonal Doppler planning, configurable instrument snapshots, H I science-product validation, and a FITS-cube injection-recovery adapter. Independent methods sandbox; not official DSA software and no named real-survey result is claimed in this release."
-```
-
-Then verify:
+This repository is already published. Use these commands from a fresh clone to verify
+that the public release reproduces its reference tests. No repository creation,
+history rewrite, or tag recreation is necessary.
 
 ```powershell
-gh repo view pkd-45/dsa-hi-survey-ops --web
+git clone https://github.com/pkd-45/dsa-hi-survey-ops.git
+cd dsa-hi-survey-ops
+.\run_tests_windows.ps1
+git status --short
 gh release view v0.2.0
-git status
 ```
 
-Open the repository in a private/logged-out browser and confirm that the README,
-figure, test workflow, licence, and release are visible.
+The test script exercises the synthetic science-validation workflow. The FITS-cube
+adapter is tested with synthetic input; real survey measurements require the
+input file, checksum, command, and results to be independently recorded.
+
+Verify the public README, documented limitations, example plots, test workflow,
+licence and tagged release before referring others to a specific version.
