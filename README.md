@@ -4,9 +4,9 @@
 
 **Catalogue-aware spectral planning and science-product validation for Deep Synoptic Array H I surveys.**
 
-This is an independent, application-focused methods sandbox. It is **not official DSA software** and its reference numbers are **not performance forecasts**.
+This independent research software explores configurable radio spectral-line planning and validation of scientific data products. It is **not official DSA software**, and its synthetic reference numbers are **not forecasts of instrument performance**.
 
-The project addresses operational tasks named in the Bonn DYNAVERSE postdoctoral advert:
+The project implements and tests complementary steps in radio spectral-line survey planning and product assessment:
 
 - forward modelling of spectral-line data;
 - Doppler/zoom-band setup;
@@ -88,7 +88,7 @@ The public DSA webpages were evolving when this sandbox was prepared. The shippe
 - `configs/dsa_full.json`: the `/overview-1` snapshot, including a 4192 x 8 kHz nearby-H I product and 15-minute observing blocks;
 - `configs/dsa_full_alt.json`: values from the current `/overview` detailed product list and observing-strategy text, including 4096 x 8 kHz and 20-minute blocks.
 
-The current `/overview` page itself contains differing values between its detailed product list and summary table. Instrument settings are therefore configuration inputs, not assumptions hidden in the algorithms. The JSON loader and tests verify that the optimiser operates under either snapshot. No application claim or scientific conclusion depends on a particular channel count or block duration.
+The current `/overview` page itself contains differing values between its detailed product list and summary table. Instrument settings are therefore configuration inputs, not assumptions hidden in the algorithms. The JSON loader and tests verify that the optimiser operates under either snapshot. No scientific conclusion depends on a particular channel count or block duration.
 
 The DSA-110 configuration records the public 1280-1530 MHz range and 8192-channel full-band channelisation. See `PUBLIC_SOURCES.md`.
 
@@ -120,15 +120,14 @@ dsa-hi-survey-ops/
 │   └── real_cube_adapter.py
 ├── tests/
 ├── results/
-├── APPLICATION_INSERT.tex
-├── INTERVIEW_BRIEF.md
 └── VALIDATION.md
 ```
 
 ## Windows quick start
 
 ```powershell
-cd D:\work\job\dsa-hi-survey-ops
+git clone https://github.com/pkd-45/dsa-hi-survey-ops.git
+cd dsa-hi-survey-ops
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\run_tests_windows.ps1
 ```
